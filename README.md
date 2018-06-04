@@ -14,14 +14,16 @@ Summary: A fast implementation of Random Forests, particularly suited for high d
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-ranger-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-ranger-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-ranger-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-ranger-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-ranger-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-ranger-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-ranger-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-ranger-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-ranger-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-ranger-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-ranger-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-ranger-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-ranger/badges/version.svg)](https://anaconda.org/conda-forge/r-ranger)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-ranger/badges/downloads.svg)](https://anaconda.org/conda-forge/r-ranger)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--ranger-green.svg)](https://anaconda.org/conda-forge/r-ranger) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-ranger.svg)](https://anaconda.org/conda-forge/r-ranger) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-ranger.svg)](https://anaconda.org/conda-forge/r-ranger) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-ranger.svg)](https://anaconda.org/conda-forge/r-ranger) |
 
 Installing r-ranger
 ===================
