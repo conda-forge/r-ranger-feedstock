@@ -1,4 +1,4 @@
-{% set version = '0.7.0' %}
+{% set version = "0.10.1" %}
 {% set native = 'm2w64-' if win else '' %}
 
 package:
@@ -10,7 +10,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ranger_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ranger/ranger_{{ version }}.tar.gz
-  sha256: 83f4b06c6e63da979a20b757aaf0042928db453c12d89281afd40046e6b5393c
+  sha256: 327ce1f603aa3a66f66494bb85ad92aaf7622bb0949976a96325d7f6663fe68b
 
 build:
   number: 0
