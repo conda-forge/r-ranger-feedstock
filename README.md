@@ -3,7 +3,7 @@ About r-ranger
 
 Home: https://github.com/imbs-hl/ranger
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ranger-feedstock/blob/master/LICENSE.txt)
 
