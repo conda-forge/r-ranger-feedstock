@@ -1,4 +1,4 @@
-{% set version = "0.12.1" %}
+{% set version = "0.13.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ranger_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ranger/ranger_{{ version }}.tar.gz
-  sha256: fc308e0ac06718272799928e1a19612de16b05bde481d8f38e11a101df5425ef
+  sha256: 60934f0accc21edeefddbb4ddebfdd7cd10a3d3e90b31aa2e6e4b7f50d632d0a
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -30,6 +30,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-matrix
@@ -49,14 +50,12 @@ test:
 
 about:
   home: https://github.com/imbs-hl/ranger
-  license: GPL-3
-  summary: A fast implementation of Random Forests, particularly suited for high dimensional
-    data. Ensembles of classification, regression, survival and probability prediction
-    trees are supported. Data from genome-wide association studies can be analyzed efficiently.
-    In addition to data frames, datasets of class 'gwaa.data' (R package 'GenABEL')
-    and 'dgCMatrix' (R package 'Matrix')  can be directly analyzed.
+  license: GPL-3.0-only
+  summary: A fast implementation of Random Forests, particularly suited for high dimensional data. Ensembles of classification, regression, survival and probability prediction trees are supported. Data from genome-wide association studies can be analyzed efficiently. In addition to data frames, datasets of class 'gwaa.data'
+    (R package 'GenABEL') and 'dgCMatrix' (R package 'Matrix')  can be directly analyzed.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
