@@ -1,4 +1,4 @@
-{% set version = "0.14.1" %}
+{% set version = "0.15.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ranger_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ranger/ranger_{{ version }}.tar.gz
-  sha256: 5d99401d555da1cfb11c70e59d1bb545ce48720073a06a2a32eb396f622dee1b
+  sha256: 4d65d9ee7c5f2704a0e303a27222c02aa53e49f3c28dc0b4451371e37ada2b2e
+  patches:
+    - patches/0001_cxx14_win.patch
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -61,24 +63,3 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - rvalieris
-
-# Package: ranger
-# Type: Package
-# Title: A Fast Implementation of Random Forests
-# Version: 0.11.2
-# Date: 2019-03-07
-# Author: Marvin N. Wright [aut, cre], Stefan Wager [ctb], Philipp Probst [ctb]
-# Maintainer: Marvin N. Wright <cran@wrig.de>
-# Description: A fast implementation of Random Forests, particularly suited for high dimensional data. Ensembles of classification, regression, survival and probability prediction trees are supported. Data from genome-wide association studies can be analyzed efficiently. In addition to data frames, datasets of class 'gwaa.data' (R package 'GenABEL') and 'dgCMatrix' (R package 'Matrix')  can be directly analyzed.
-# License: GPL-3
-# Imports: Rcpp (>= 0.11.2), Matrix
-# LinkingTo: Rcpp, RcppEigen
-# Depends: R (>= 3.1)
-# Suggests: survival, testthat
-# RoxygenNote: 6.1.1
-# URL: https://github.com/imbs-hl/ranger
-# BugReports: https://github.com/imbs-hl/ranger/issues
-# NeedsCompilation: yes
-# Packaged: 2019-03-07 12:01:18 UTC; wright
-# Repository: CRAN
-# Date/Publication: 2019-03-07 14:10:20 UTC

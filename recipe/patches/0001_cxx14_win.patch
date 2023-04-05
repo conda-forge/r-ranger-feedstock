@@ -1,0 +1,17 @@
+From e23c844c25979df1b5b6ef4cd984a7ca12a28fa7 Mon Sep 17 00:00:00 2001
+From: Mervin Fansler <mmfansler@gmail.com>
+Date: Wed, 5 Apr 2023 16:18:16 -0400
+Subject: [PATCH] Update Makevars.win
+
+---
+ src/Makevars.win | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Makevars.win b/src/Makevars.win
+index a6af4dd1..3789cf77 100644
+--- a/src/Makevars.win
++++ b/src/Makevars.win
+@@ -1,2 +1,2 @@
+ PKG_CPPFLAGS = -DR_BUILD -DWIN_R_BUILD
+-
++CXX_STD = CXX14
