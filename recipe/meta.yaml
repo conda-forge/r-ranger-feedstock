@@ -1,4 +1,4 @@
-{% set version = "0.14.1" %}
+{% set version = "0.15.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ranger_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ranger/ranger_{{ version }}.tar.gz
-  sha256: 5d99401d555da1cfb11c70e59d1bb545ce48720073a06a2a32eb396f622dee1b
+  sha256: 4d65d9ee7c5f2704a0e303a27222c02aa53e49f3c28dc0b4451371e37ada2b2e
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
