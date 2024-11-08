@@ -1,4 +1,4 @@
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,12 +9,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ranger_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ranger/ranger_{{ version }}.tar.gz
-  sha256: 0395f93afdb807a7882c1fa8f183a26a871c5168ea0903566951298ef1138589
+  sha256: d48cdf4ce4917af93d9fe221c25d11089f5139ed765bbbff43e7b4fe58a09d36
   patches:
     - patches/0001_cxx14_win.patch
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
